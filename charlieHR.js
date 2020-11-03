@@ -7,8 +7,12 @@ class User {
   age() {
     const today = new Date();
     const birthday = new Date(this.dob);
-    const age = today.getFullYear() - birthday.getFullYear();
-    return age;
+    let age = today.getFullYear() - birthday.getFullYear();
+    const month =  today.getMonth() - birthday.getMonth();
+    if (month < 0 || (month === 0 && today.getDate() < birthday.getDate())) {
+      age--;
+  }
+   return age;
   }
 
   nextBirthday() {

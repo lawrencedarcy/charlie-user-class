@@ -6,7 +6,7 @@ const testUserThree = new User('Fiona', '1925, 3, 13');
 
 test('calculate age', () => {
   expect(testUserOne.age()).toBe(34);
-  expect(testUserTwo.age()).toBe(48);
+  expect(testUserTwo.age()).toBe(47);
   expect(testUserThree.age()).toBe(95);
 }); 
 
